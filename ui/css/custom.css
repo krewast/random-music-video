@@ -1,0 +1,36 @@
+body {
+	color: #CCCCCC; /*00D18C D73E36*/
+	background-color: #0F1517;
+}
+
+h1 {
+	float: left;
+	margin: 10px 0 20px 0;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 2em;
+}
+
+h1 a {
+	color: #D40055;
+}
+
+a {
+	color: #2B5D6B;
+}
+
+hr {
+	border-color: #8C0038;
+}
+
+.row {
+	position: relative;
+	max-width: 750px;
+}
+
+#next-video-button {
+	float: right;
+}
+
+#footer p {
+	text-align: center;
+}

@@ -1,6 +1,6 @@
-#Random Music Video
+#[Random Music Video](http://www.krebas.com/random-music-video/)
 
-Site can be found [here](http://www.krebas.com/random-music-video/)
+Shows random music videos from Youtube.
 
 ##Credit
 

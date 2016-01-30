@@ -57,7 +57,7 @@ function getRandomVideoID() {
 	// Get new videoID from the API
 	var randomVideoID = '';
 	$.ajax({
-		url: '/music/api/randomvideoid',
+		url: '/random-music-video/api/randomvideoid',
 		dataType: 'json',
 		async: false,
 		success: function(jsonData) {

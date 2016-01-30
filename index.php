@@ -8,23 +8,18 @@ $f3->config('config.ini');
 
 // Routes
 $f3->route('GET /', function($f3) {
-	$videoIds = file('data/videoids.csv');
-	$randomVideoId = $videoIds[array_rand($videoIds)];
-
-	$f3->reroute($randomVideoId);
+	$f3->set('title', 'Main');
+	$f3->set('content', 'video.html');
+	echo View::instance()->render('layout.html');
 });
 
-$f3->route('GET /@videoId', function($f3, $params) {
-	$videoId = (string)$params['videoId'];
+$f3->route('GET /api/randomvideoid', function($f3) {
+	$videoIDs = file('data/videoids.csv');
+	$randomVideoID = str_replace(array("\r", "\n"), '', $videoIDs[array_rand($videoIDs)]);
 
-	if (strlen($videoId) == 11) {
-		$f3->set('videoId', $videoId);
-		$f3->set('title', $videoId);
-		$f3->set('content', 'video.html');
-		echo View::instance()->render('layout.html');
-	} else {
-		$f3->error(404);
-	}
+	$returnObject = new stdClass();
+	$returnObject->randomVideoID = $randomVideoID;
+	echo json_encode($returnObject);
 });
 
 $f3->route('GET /about', function($f3) {

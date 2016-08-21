@@ -1,4 +1,4 @@
-#[Random Music Video](http://www.krebas.com/random-music-video/)
+#[Random Music Video](http://random-music-video.krewast.com/)
 
 Shows random music videos from Youtube.
 
